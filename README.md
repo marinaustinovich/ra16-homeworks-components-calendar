@@ -2,8 +2,7 @@
 
 deployment: https://marinaustinovich.github.io/ra16-homeworks-components-calendar/
 
-Календарь
-===
+# Календарь
 
 Создать React-компонет `Calendar` (функциональный компонент), который бы показывал текущую дату и текущий месяц, как показано на картинке:
 ![Внешний вид компонента](./public/preview.png)
@@ -14,9 +13,7 @@ deployment: https://marinaustinovich.github.io/ra16-homeworks-components-calenda
 const now = new Date(2017, 2, 8);
 
 // внутри компонента App:
-return (
-  <Calendar date={now} />
-);
+return <Calendar date={now} />;
 ```
 
 ## Описание компонента
@@ -24,6 +21,7 @@ return (
 Компонент должен иметь один атрибут `date`, в котором он ожидает текущую дату, _объект_ `Date`.
 
 Компонент должен создавать DOM элемент следующей структуры:
+
 ```html
 <div class="ui-datepicker">
   <div class="ui-datepicker-material-header">
@@ -36,18 +34,21 @@ return (
   </div>
   <div class="ui-datepicker-header">
     <div class="ui-datepicker-title">
-      <span class="ui-datepicker-month">Март</span>&nbsp;<span class="ui-datepicker-year">2017</span>
+      <span class="ui-datepicker-month">Март</span>&nbsp;<span
+        class="ui-datepicker-year"
+        >2017</span
+      >
     </div>
   </div>
   <table class="ui-datepicker-calendar">
     <colgroup>
-      <col>
-      <col>
-      <col>
-      <col>
-      <col>
-      <col class="ui-datepicker-week-end">
-      <col class="ui-datepicker-week-end">
+      <col />
+      <col />
+      <col />
+      <col />
+      <col />
+      <col class="ui-datepicker-week-end" />
+      <col class="ui-datepicker-week-end" />
     </colgroup>
     <thead>
       <tr>
